@@ -7,6 +7,9 @@ import java.util.ArrayList;
 
 public class StudyStation extends Console {
 
+    double rechenverbrauch;
+    String ProducerName = "Pansomy";
+
 
 
     public StudyStation(int versionsnummer, ArrayList software, ProcessingUnits processingUnit){
@@ -16,31 +19,30 @@ public class StudyStation extends Console {
 
     }
 
-    //public void setVersionsnummer(int versionsnummer) {
-    //    this.versionsnummer = versionsnummer;
-    //}
-
-    //public int getVersionsnummer() {
-    //    return versionsnummer;
-    //}
-
-
-
+    //Get Processing Unit object
     public ProcessingUnits getProcessingUnits(){
         return processingUnit;
     }
 
+    //Get Performance Wert of Processing Unit Object
     @Override
     public double getPerformancewert(){
         return getProcessingUnits().getPerformancewertUnit();
     }
 
     @Override
-    public void getRechenverbrauch(ArrayList<Software> software) {
-        for ( Software s2 : software){
-            s2.getRechenverbrauchSoftware();
+    public double getRechenverbrauch() {
+
+         for (Software s2 : software){
+            double rechenverbrauch = s2.getRechenverbrauchSoftware();
         }
+
+         return rechenverbrauch;
     }
+    public String getProducerName(){
+        return ProducerName;
+    }
+
 
 
 }

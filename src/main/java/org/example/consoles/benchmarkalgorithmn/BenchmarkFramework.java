@@ -17,6 +17,7 @@ public class BenchmarkFramework extends Benchmark {
 
         ArrayList <Software> softwareTest = new ArrayList<>();
 
+
         softwareTest.add(software1);
         softwareTest.add(software2);
         softwareTest.add(software3);
@@ -31,6 +32,7 @@ public class BenchmarkFramework extends Benchmark {
         Console StudyStation1 = new StudyStation(124, softwareTest, processingUnitStudyStation);
 
         Benchmark benchmark1 = new Benchmark();
+
         benchmark1.executeBenchmark(StudyStation1);
 
 

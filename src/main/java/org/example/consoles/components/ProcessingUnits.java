@@ -14,6 +14,7 @@ public class ProcessingUnits {
 
     }
 
+    //Get Performance Wert of Processing Unit
     public double getPerformancewertUnit(){
         return performancewert;
     }

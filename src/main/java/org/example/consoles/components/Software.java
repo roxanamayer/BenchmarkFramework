@@ -18,6 +18,8 @@ public class Software {
             throw new IllegalArgumentException();
         }
     }
+
+    //Get Rechenverbrauch of Software object
     public double getRechenverbrauchSoftware(){
         return rechenverbrauch;
     }

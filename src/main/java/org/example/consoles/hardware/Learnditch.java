@@ -8,6 +8,8 @@ import java.util.ArrayList;
 public class Learnditch extends Console {
 
 
+    double rechenverbrauch;
+    String ProducerName = "Nindandolo";
 
     public Learnditch(int versionsnummer, ArrayList software, ProcessingUnits processingUnit) {
         this.versionsnummer=versionsnummer;
@@ -35,5 +37,16 @@ public class Learnditch extends Console {
         return getProcessingUnits().getPerformancewertUnit();
     }
 
+
+    public double getRechenverbrauch() {
+
+        for (Software s2 : software){
+            double rechenverbrauch = s2.getRechenverbrauchSoftware();
+        }
+        return rechenverbrauch;
+    }
+    public String getProducerName(){
+        return ProducerName;
+    }
 
 }
