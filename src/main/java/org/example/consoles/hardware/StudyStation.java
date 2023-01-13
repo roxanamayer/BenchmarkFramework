@@ -12,7 +12,7 @@ public class StudyStation extends Console {
 
 
 
-    public StudyStation(int versionsnummer, ArrayList software, ProcessingUnits processingUnit){
+    public StudyStation(int versionsnummer, ArrayList<Software> software, ProcessingUnits processingUnit){
         this.versionsnummer=versionsnummer;
         this.software=software;
         this.processingUnit=processingUnit;
@@ -31,14 +31,11 @@ public class StudyStation extends Console {
     }
 
     @Override
-    public double getRechenverbrauch() {
-
-         for (Software s2 : software){
-            double rechenverbrauch = s2.getRechenverbrauchSoftware();
+    public ArrayList<Software> getSoftware(){
+       return this.software;
         }
 
-         return rechenverbrauch;
-    }
+
     public String getProducerName(){
         return ProducerName;
     }

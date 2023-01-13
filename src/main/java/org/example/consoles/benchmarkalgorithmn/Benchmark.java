@@ -10,21 +10,21 @@ public class Benchmark {
 
 
 
-    public void executeBenchmark(Console c1){
+    public ArrayList<Double> executeBenchmark(Console c1){
         double result = 0;
 
-        ArrayList<Double> rechenverbrauch = new ArrayList<>();
-        for (double m : rechenverbrauch){
-            rechenverbrauch.add(c1.getRechenverbrauch());
+        ArrayList<Software> softwareConsole = c1.getSoftware();
+
+        ArrayList<Double>endresult = new ArrayList<>();
+
+        for(int i=0; i<softwareConsole.size(); i++){
+             result = c1.getPerformancewert()+ softwareConsole.get(i).getRechenverbrauchSoftware();
+            endresult.add(result);
         }
-
-        for (int i=0; i<rechenverbrauch.size(); i++){
-            System.out.println(c1.getPerformancewert()/rechenverbrauch.get(i));
+        return endresult;
 
         }
-
-
-
-
-    }
 }
+
+
+

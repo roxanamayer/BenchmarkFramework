@@ -33,7 +33,8 @@ public class BenchmarkFramework extends Benchmark {
 
         Benchmark benchmark1 = new Benchmark();
 
-        benchmark1.executeBenchmark(StudyStation1);
+        System.out.println(benchmark1.executeBenchmark(StudyStation1));
+
 
 
 

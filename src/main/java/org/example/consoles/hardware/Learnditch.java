@@ -11,7 +11,7 @@ public class Learnditch extends Console {
     double rechenverbrauch;
     String ProducerName = "Nindandolo";
 
-    public Learnditch(int versionsnummer, ArrayList software, ProcessingUnits processingUnit) {
+    public Learnditch(int versionsnummer, ArrayList<Software> software, ProcessingUnits processingUnit) {
         this.versionsnummer=versionsnummer;
         this.software=software;
         this.processingUnit=processingUnit;
@@ -38,13 +38,11 @@ public class Learnditch extends Console {
     }
 
 
-    public double getRechenverbrauch() {
-
-        for (Software s2 : software){
-            double rechenverbrauch = s2.getRechenverbrauchSoftware();
-        }
-        return rechenverbrauch;
+    @Override
+    public ArrayList<Software> getSoftware() {
+        return this.software;
     }
+
     public String getProducerName(){
         return ProducerName;
     }
