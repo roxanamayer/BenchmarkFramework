@@ -8,24 +8,22 @@ import java.util.ArrayList;
 public class Learnditch extends Console {
 
 
-    double rechenverbrauch;
-    String ProducerName = "Nindandolo";
+    private double rechenverbrauch;
+    private final Producer producer;
 
-    public Learnditch(int versionsnummer, ArrayList<Software> software, ProcessingUnits processingUnit) {
+
+    public Learnditch(final int versionsnummer, final ArrayList<Software> software, final ProcessingUnits processingUnit
+            , final Producer producer) {
+
         this.versionsnummer=versionsnummer;
         this.software=software;
         this.processingUnit=processingUnit;
+        this.producer=producer;
     }
 
 
 
-    public void setVersionsnummer(int versionsnummer){
-        this.versionsnummer = versionsnummer;
-    }
 
-    public int getVersionsnummer(){
-        return versionsnummer;
-    }
 
 
     public ProcessingUnits getProcessingUnits(){
@@ -43,8 +41,12 @@ public class Learnditch extends Console {
         return this.software;
     }
 
-    public String getProducerName(){
-        return ProducerName;
+    @Override
+    public String getProducerName() {
+        return producer.getName();
     }
+
+
+
 
 }

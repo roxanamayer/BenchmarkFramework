@@ -7,15 +7,17 @@ import java.util.ArrayList;
 
 public class StudyStation extends Console {
 
-    double rechenverbrauch;
-    String ProducerName = "Pansomy";
+    private double rechenverbrauch;
+    private final Producer producer;
 
 
 
-    public StudyStation(int versionsnummer, ArrayList<Software> software, ProcessingUnits processingUnit){
+    public StudyStation(final int versionsnummer, final ArrayList<Software> software, final ProcessingUnits processingUnit,
+                        final Producer producer){
         this.versionsnummer=versionsnummer;
         this.software=software;
         this.processingUnit=processingUnit;
+        this.producer=producer;
 
     }
 
@@ -36,10 +38,9 @@ public class StudyStation extends Console {
         }
 
 
-    public String getProducerName(){
-        return ProducerName;
-    }
+        public String getProducerName(){
+        return producer.getName();
 
-
+     }
 
 }

@@ -3,11 +3,13 @@ package org.example.consoles.benchmarkalgorithmn;
 import org.example.consoles.components.ProcessingUnits;
 import org.example.consoles.components.Software;
 import org.example.consoles.hardware.Console;
+import org.example.consoles.hardware.Learnditch;
+import org.example.consoles.hardware.Producer;
 import org.example.consoles.hardware.StudyStation;
 
 import java.util.ArrayList;
 
-public class BenchmarkFramework extends Benchmark {
+public class BenchmarkFramework extends CheatBenchmark {
     public static void main(String[] args) {
 
 
@@ -27,16 +29,19 @@ public class BenchmarkFramework extends Benchmark {
             System.out.println(s1.getRechenverbrauchSoftware());
         }
 
-        ProcessingUnits processingUnitStudyStation = new ProcessingUnits("StudySUnit", 12.0);
+        ProcessingUnits processingUnitStudyStation = new ProcessingUnits("StudySUnit", 25.0);
+        ProcessingUnits processingUnitLearnditch = new ProcessingUnits("LearnditchUnit",30.0);
 
-        Console StudyStation1 = new StudyStation(124, softwareTest, processingUnitStudyStation);
+        Producer producerLearnditch = new Producer("Nindandolo");
+        Producer producerStudyStation = new Producer("Pansomy");
+
+        Console StudyStation1 = new StudyStation(124, softwareTest, processingUnitStudyStation, producerStudyStation);
+        Console Learnditch1 = new Learnditch(234, softwareTest, processingUnitLearnditch, producerLearnditch);
 
         Benchmark benchmark1 = new Benchmark();
 
         System.out.println(benchmark1.executeBenchmark(StudyStation1));
-
-
-
+        System.out.println(benchmark1.executeBenchmark(Learnditch1));
 
     }
 }

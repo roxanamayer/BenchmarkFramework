@@ -7,19 +7,19 @@ import org.example.consoles.hardware.StudyStation;
 
 import java.util.ArrayList;
 
-public abstract class Console extends Producer {
+public abstract class Console{
 
-     int versionsnummer;
+     public int versionsnummer;
      public ProcessingUnits processingUnit;
      public ArrayList<Software> software;
-     private String ProducerName;
-
-
+     public Producer producer;
 
 
     public abstract ArrayList<Software> getSoftware();
 
     public abstract double getPerformancewert();
+
+    public abstract  String getProducerName();
 
 
 

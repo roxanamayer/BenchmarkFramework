@@ -21,6 +21,7 @@ public class Benchmark {
              result = c1.getPerformancewert()+ softwareConsole.get(i).getRechenverbrauchSoftware();
             endresult.add(result);
         }
+
         return endresult;
 
         }

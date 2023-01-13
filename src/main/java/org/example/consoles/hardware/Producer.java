@@ -1,9 +1,15 @@
 package org.example.consoles.hardware;
 
-abstract class Producer {
+public class Producer {
 
-    String name;
+    private final String name;
 
-    public abstract String getProducerName();
+    public Producer(final String name) {
+        this.name = name;
+    }
+
+    public String getName(){
+        return name;
+    }
 
 }
